@@ -4,7 +4,7 @@ import SwiftUI
 struct OutloudDJApp: App {
     @StateObject private var authService = SpotifyAuthService()
     @StateObject private var apiService: SpotifyAPIService
-    @StateObject private var backendService = PartyBackendService(baseURL: URL(string: "https://YOUR_BACKEND_URL")!)
+    @StateObject private var backendService = PartyBackendService(baseURL: URL(string: "http://localhost:3000")!)
 
     init() {
         let auth = SpotifyAuthService()
