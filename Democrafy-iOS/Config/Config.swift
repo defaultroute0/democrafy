@@ -2,10 +2,10 @@ import Foundation
 
 struct Config {
     // Backend Configuration
-    static let backendURL = URL(string: "http://localhost:3000")!
+    static let backendURL = URL(string: ProcessInfo.processInfo.environment["BACKEND_URL"] ?? "http://localhost:3000")!
     
     // Spotify Configuration
-    static let spotifyClientID = "809914f948534c97b01bbb0b81049b55"
+    static let spotifyClientID = ProcessInfo.processInfo.environment["SPOTIFY_CLIENT_ID"] ?? ""
     static let redirectURI = URL(string: "democrafy://callback")!
     static let scopes = [
         "user-read-playback-state",

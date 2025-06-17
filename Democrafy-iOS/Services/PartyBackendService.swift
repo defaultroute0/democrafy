@@ -10,7 +10,7 @@ class PartyBackendService: ObservableObject {
     private let baseURL: URL
     private var cancellables = Set<AnyCancellable>()
     
-    init(baseURL: URL = Config.baseURL) {
+    init(baseURL: URL = Config.backendURL) {
         self.baseURL = baseURL
     }
     
